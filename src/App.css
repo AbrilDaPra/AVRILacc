@@ -1,0 +1,15 @@
+body{
+  background-color: #FFE1E1;
+}
+
+.centered-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.centered-greeting{
+  text-align: center;
+  font-size: 30px;
+}

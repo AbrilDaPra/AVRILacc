@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
 import { ThemeProvider, createTheme } from '@mui/material';
 
 const theme = createTheme({
@@ -14,7 +13,7 @@ const theme = createTheme({
       main: '#ec407a',
     },
     background: {
-      default: '#ddb3df',
+      default: '#FFE1E1',
     },
     error: {
       main: '#c2185b',

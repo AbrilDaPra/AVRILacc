@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import '../../src/App.css';
 
 const ItemListContainer = ({greeting}) => {
+  
   return (
-    <div>
-        <h2>{greeting}</h2>
+    <div className='centered-container'>
+        <h2 className='centered-greeting'>{greeting}</h2>
     </div>
   )
 }

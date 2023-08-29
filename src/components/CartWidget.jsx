@@ -1,10 +1,10 @@
-import React from 'react'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const CartWidget = () => {
   return (
     <>
-      Icono de carrito
-      <p>3</p>
+      <ShoppingCartIcon />
+      <p>5</p>
     </>
   )
 }

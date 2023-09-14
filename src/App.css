@@ -1,7 +1,12 @@
+*{
+  padding: 0;
+  margin: 0;
+}
 body{
   background-color: #FFE1E1;
 }
 
+/* GREETING */
 .centered-container{
   display: flex;
   justify-content: center;
@@ -12,4 +17,71 @@ body{
 .centered-greeting{
   text-align: center;
   font-size: 30px;
+}
+
+/* COUNTER */
+.productCounter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.counterButton{
+  background-color: pink;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.counterValue{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.addToCartButton{
+  background-color: pink;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin-left: 10px;
+}
+
+.cardsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* BANNER */
+.banner{
+  color: black;
+  text-align: center;
+}
+.banner img{
+  max-width: 100%;
+  height: auto;
+}
+.bannerContent{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+}
+.bannerContent h1{
+  font-size: 50px;
+  margin: 10px 0;
+}
+.bannerContent h2{
+  font-size: 30px;
+  margin: 10px 0;
 }

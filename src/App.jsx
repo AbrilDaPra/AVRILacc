@@ -7,6 +7,7 @@ import Aboutus from './components/Aboutus';
 import Contact from './components/Contact';
 import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer';
+// import ItemDetail from './components/ItemDetail';
 
 const App = () => {
 
@@ -20,13 +21,12 @@ const App = () => {
           <Route exact path="/" element={ <Home /> } />
           <Route exact path="/item" element={ <ItemDetailContainer /> } />
           <Route exact path="/item/:id" element={<ItemDetailContainer />} />
+          <Route exact path="/categorie/:categorie" element={<ItemListContainer />} />
+          <Route exact path="/products/:id" element={<ItemDetailContainer />} />
           <Route exact path="/products" element={<ItemListContainer />} />
           <Route exact path="/aboutus" element={ <Aboutus /> } />
           <Route exact path="/contact" element={ <Contact /> } />
           <Route exact path="/cart" element={ <Cart />} />
-
-          {/* <Route exact path="/category/:id" element={<ItemListContainer />} />
-          <Route exact path="/Item/:id" element={<ItemDetailContainer />} /> */}
 
         </Routes>
         

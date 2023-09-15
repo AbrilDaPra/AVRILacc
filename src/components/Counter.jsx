@@ -10,7 +10,9 @@ const Counter = () => {
     }
 
     const decrement = () => {
+      if(number > 0) {
         setNumber(number - 1);
+      }
     }
 
     const addToCart = () => {

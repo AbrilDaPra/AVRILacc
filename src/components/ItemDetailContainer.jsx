@@ -1,29 +1,44 @@
-import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { productsData } from './Products';
+import { getProductById } from './getproduct';
 import '../App.css';
+import Button from '@mui/material/Button'
 
 const ItemDetailContainer = () => {
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
-    const data = productsData;
-
-    const product = data.find(product => product.id === parseInt(id));
+    const product = getProductById(parseInt(id));
 
     if (product) {
-      setProducts([product]);
+      setProduct(product);
     } else {
-      setProducts([]);
+      setProduct(null);
     }
   }, [id]);
 
   return (
-    <div>
-      <h1 className='products-title'>PRODUCTS</h1>
-      {products.length > 0 ? <ItemList products={products} /> : <p>No product found.</p>}
+    <div className='product-detail-container'>
+      {!product && <h1 className='products-title'>PRODUCTS</h1>}
+      {product ? (
+        <div className='product-detail'>
+
+          <div className='product-image'>
+          <img src={product.image} alt={product.name} className='product-image' />
+          </div>
+
+          <div className='product-info'>
+          <h2>{product.name}</h2>
+          <p>Description: {product.description}</p>
+          <p>Price: ${product.price}</p>
+          <Button className='button-addtocart'>ADD TO CART</Button>
+          </div>
+
+        </div>
+      ) : (
+        <p>No product found.</p>
+      )}
     </div>
   );
 }

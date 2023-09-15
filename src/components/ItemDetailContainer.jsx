@@ -2,26 +2,31 @@ import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { productsData } from './Products';
+import '../App.css';
 
 const ItemDetailContainer = () => {
   const [products, setProducts] = useState([]);
-  const { categorie } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     const data = productsData;
 
-    const filteredProducts = categorie ? data.filter(product => product.categorie === categorie) : data;
+    const product = data.find(product => product.id === parseInt(id));
 
-    setProducts(filteredProducts);
-  }, [categorie]);
+    if (product) {
+      setProducts([product]);
+    } else {
+      setProducts([]);
+    }
+  }, [id]);
 
   return (
     <div>
-      <h1>PRODUCTS</h1>
-      {products ? <ItemList products={products} /> : <p>No products available.</p>}
+      <h1 className='products-title'>PRODUCTS</h1>
+      {products.length > 0 ? <ItemList products={products} /> : <p>No product found.</p>}
     </div>
   );
-};
+}
 
 export default ItemDetailContainer;
 

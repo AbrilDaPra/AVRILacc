@@ -138,11 +138,30 @@ body{
   justify-content: space-between;
   gap: 20px;
   margin: 30px;
+  text-decoration: none !important;
 }
 .product-card{
   width: calc(25% -20px);
   margin-bottom: 20px;
 }
+.product-card a{
+  text-decoration: none !important;
+}
 .product{
   height: 400px;
+}
+.products-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none !important;;
+}
+.products-container h1{
+  margin: 30px;
 }

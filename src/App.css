@@ -6,6 +6,39 @@ body{
   background-color: #FFE1E1;
 }
 
+/* NAVBAR */
+.navbar{
+  background-color: black;
+  color: #FFE1E1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo{
+  text-decoration: none;
+  color: #FFE1E1;
+}
+
+.logo h1{
+  margin: 0;
+}
+
+.menu{
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+}
+.menu li a{
+  text-decoration: none;
+  color: #FFE1E1;
+}
+
+.menu-link:hover{
+  color: gray;
+}
+
 /* GREETING */
 .centered-container{
   display: flex;
@@ -84,4 +117,32 @@ body{
 .bannerContent h2{
   font-size: 30px;
   margin: 10px 0;
+}
+
+/* CART */
+.cart{
+  display: flex;
+  gap: 20px;
+  margin: 10px;
+}
+
+.cart-text{
+  color: white;
+  text-decoration: none;
+}
+
+/* PRODUCTS */
+.product-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 30px;
+}
+.product-card{
+  width: calc(25% -20px);
+  margin-bottom: 20px;
+}
+.product{
+  height: 400px;
 }

@@ -1,11 +1,11 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import '../App.css';
 const CartWidget = () => {
   return (
-    <>
-      <ShoppingCartIcon />
-      <p>5</p>
-    </>
+    <div className='cart'>
+      <ShoppingCartIcon sx={{ color: 'white' }} />
+      <p className='cart-text'>5</p>
+    </div>
   )
 }
 

@@ -1,38 +1,27 @@
-import ItemDetail from './ItemDetail';
+import ItemList from './ItemList';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { productsData } from './Products';
 
 const ItemDetailContainer = () => {
-    const products = [
-        { id: 1, name: "Product A", description: "......", price: 1000, categorie: "A"},
-        { id: 2, name: "Product B", description: "......", price: 1000, categorie: "B"},
-        { id: 3, name: "Product C", description: "......", price: 1000, categorie: "B"},
-        { id: 4, name: "Product D", description: "......", price: 1000, categorie: "C"},
-        { id: 5, name: "Product E", description: "......", price: 1000, categorie: "C"},
-        { id: 6, name: "Product F", description: "......", price: 1000, categorie: "D"},
-    ]
+  const [products, setProducts] = useState([]);
+  const { categorie } = useParams();
 
-    const showProducts = new Promise ((resolve, reject) => {
-        if (products.length > 0) {
-            setTimeout(() => {
-                resolve(products)
-            }, 5000)
-        } else {
-            reject("No products available")
-        }
-    })
-    
-    showProducts
-        .then((result) => {
-            console.log(result)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-    
-    return (
-        <>
-            <ItemDetail products={products} />
-        </>
-    )
-}
+  useEffect(() => {
+    const data = productsData;
+
+    const filteredProducts = categorie ? data.filter(product => product.categorie === categorie) : data;
+
+    setProducts(filteredProducts);
+  }, [categorie]);
+
+  return (
+    <div>
+      <h1>PRODUCTS</h1>
+      {products ? <ItemList products={products} /> : <p>No products available.</p>}
+    </div>
+  );
+};
 
 export default ItemDetailContainer;
+

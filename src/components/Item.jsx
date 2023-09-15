@@ -5,19 +5,27 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Counter from './Counter';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import '../App.css';
 
-const Item = ({ name, image, title }) => {
+const Item = ({ name, image, price, product }) => {
   return (
-    <Card sx={{ maxWidth: 345, margin: '10px' }}>
+    <Card className="product-card">
       <CardMedia
-        sx={{ height: '300px' }}
+        component="img"
+        height="300"
         image={image}
-        title={title}
+        title={name}
+        alt={name}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Price: ${price}
+        </Typography>
+        <Link className='see-more' to={`/item/${product.id}`}>SEE DETAILS</Link>
       </CardContent>
       <CardActions>
         <Counter />
@@ -28,8 +36,9 @@ const Item = ({ name, image, title }) => {
 
 Item.propTypes = {
   name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  price: PropTypes.number.isRequired,
+  product: PropTypes.object.isRequired,
 };
 
 export default Item;

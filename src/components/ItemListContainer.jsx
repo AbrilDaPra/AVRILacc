@@ -16,10 +16,7 @@ const ItemListContainer = () => {
     useEffect(() => {
       const data = productsData;
       const filteredProducts = categorie ? data.filter(product => product.categorie === categorie) : data;
-    // fetchProducts().then((data) => {
-    //   const filteredProducts = categorie ? data.filter(product => product.categorie === categorie) : data;
-    //   setProducts(filteredProducts);
-    // })
+    
       setProducts(filteredProducts);
     }, [categorie]);
 

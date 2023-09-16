@@ -7,7 +7,6 @@ import Aboutus from './components/Aboutus';
 import Contact from './components/Contact';
 import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer';
-// import ItemDetail from './components/ItemDetail';
 
 const App = () => {
 

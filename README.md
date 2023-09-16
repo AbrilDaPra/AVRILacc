@@ -1,6 +1,6 @@
 # AVRIL acc
 
-Welcome to my Accessories website project! This website showcases a wide range of accessories using technologies such as HTML, CSS, JavaScript, and primarily React JS, built with Vite.
+Welcome to my AVRIL acc website project! This website showcases a wide range of accessories using technologies such as HTML, CSS, JavaScript, and primarily React JS, built with Vite.
 
 ## Table of Contents
 - [About the Project](#about-the-project)
@@ -11,7 +11,7 @@ Welcome to my Accessories website project! This website showcases a wide range o
 
 ## About the Project
 
-Our Accessories Website is a dynamic platform designed to display a diverse selection of accessories, allowing users to explore and purchase their favorite items.
+AVRIL Website is a dynamic platform designed to display a diverse selection of accessories, allowing users to explore and purchase their favorite items.
 
 ## Technologies Used
 

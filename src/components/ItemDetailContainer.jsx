@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductById } from './getproduct';
+import { getProductById } from '../js/getproduct';
 import '../App.css';
 import Button from '@mui/material/Button'
 

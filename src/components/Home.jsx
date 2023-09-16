@@ -1,4 +1,4 @@
-import imgBanner from '../../public/images/banner-marmol.jpg';
+import imgBanner from '../../public/images/banner.jpg';
 import '../App.css';
 
 const Home = () => {

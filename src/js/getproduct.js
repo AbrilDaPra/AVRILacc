@@ -1,4 +1,4 @@
-import { productsData } from './Products';
+import { productsData } from '../components/Products';
 
 export const getProductById = (productId) => {
     const product = productsData.find((product) => product.id === productId);

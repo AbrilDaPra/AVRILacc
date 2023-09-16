@@ -1,4 +1,4 @@
-# Accessories Website
+# AVRIL acc
 
 Welcome to my Accessories website project! This website showcases a wide range of accessories using technologies such as HTML, CSS, JavaScript, and primarily React JS, built with Vite.
 

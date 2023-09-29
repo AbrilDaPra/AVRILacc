@@ -1,23 +1,30 @@
 import { useState } from "react";
 import "../App.css";
+import PropTypes from 'prop-types';
 
-const Counter = () => {
+const Counter = ({ stock }) => {
 
     const [number, setNumber] = useState(0);
 
     const increment = () => {
-        setNumber(number + 1);
+      if(number < stock) {
+        setNumber((prevNumber) => prevNumber + 1);
+      }
     }
 
     const decrement = () => {
       if(number > 0) {
-        setNumber(number - 1);
+        setNumber((prevNumber) => prevNumber - 1);
       }
     }
 
     const addToCart = () => {
-      console.log("Product added to cart");
-    }
+      if (number > 0) {
+        console.log("Product added to cart");
+      } else {
+        console.log("Please select at least one product to add to the cart")
+      }
+    };
 
   return (
     <div className="productCounter">
@@ -29,4 +36,9 @@ const Counter = () => {
   )
 };
 
+Counter.propTypes = {
+  stock: PropTypes.number,
+};
+
 export default Counter;
+

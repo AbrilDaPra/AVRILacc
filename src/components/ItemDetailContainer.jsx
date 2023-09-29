@@ -3,10 +3,13 @@ import { useParams } from 'react-router-dom';
 import { getProductById } from '../js/getproduct';
 import '../App.css';
 import Button from '@mui/material/Button'
+import Counter from './Counter';
+import { useCart } from '../context/CartContext';
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState(null);
   const { id } = useParams();
+  const { handleAddToCart } = useCart();
 
   useEffect(() => {
     const product = getProductById(parseInt(id));
@@ -17,6 +20,18 @@ const ItemDetailContainer = () => {
       setProduct(null);
     }
   }, [id]);
+
+  // const handleQuantityChange = (newQuantity) => {
+  //   setQuantity(newQuantity);
+  // }
+
+  // const handleAddToCartClick = () => {
+  //   if (quantity > 0) {
+  //     handleAddToCart(product, quantity);
+  //   } else {
+  //     console.log("Please select at least one product to add to the cart!")
+  //   }
+  // }
 
   return (
     <div className='product-detail-container'>
@@ -32,7 +47,8 @@ const ItemDetailContainer = () => {
           <h2>{product.name}</h2>
           <p>Description: {product.description}</p>
           <p>Price: ${product.price}</p>
-          <Button className='button-addtocart'>ADD TO CART</Button>
+          <Counter stock={product.stock} />
+          <Button className='button-addtocart' onClick={() => handleAddToCart(product, 1)}>ADD TO CART</Button>
           </div>
 
         </div>

@@ -1,6 +1,21 @@
+import { useEffect } from 'react';
 import '../App.css';
 
 const Aboutus = () => {
+
+  useEffect(() => {
+
+    const clickear = () => {
+      console.log("click")
+    }
+
+    window.addEventListener("click", clickear)
+
+    return () => {
+      window.removeEventListener("click", clickear)
+    }
+  }, [])
+ 
   return (
     <div className="about-us">
       <h1>ABOUT US</h1>

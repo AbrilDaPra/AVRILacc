@@ -43,7 +43,7 @@ const Item = ({ id, name, image, price, product }) => {
         {showDescription && <p>{product.description}</p>}
       </CardContent>
       <CardActions>
-        <Counter className="product-counter" />
+        <Counter className="product-counter" stock={product.stock} />
       </CardActions>
     </Card>
   )

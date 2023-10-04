@@ -116,9 +116,10 @@ a{
   margin: 10px;
 }
 
-.cart-text{
+.cart-number {
   color: white;
 }
+
 
 /* PRODUCTS */
 .product-list{
@@ -248,3 +249,44 @@ background-color: #FFE1E1;
   background-color: #666 !important;
 }
 
+
+
+.container.item-list {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+.product-title {
+  font-size: 18px; /* Cambia el tamaño del título del producto */
+  margin-bottom: 10px; /* Agrega espacio inferior */
+}
+
+/* Estilos para el precio del producto */
+.product-price {
+  font-weight: bold; /* Hace que el precio sea más audaz */
+  color: #ff6f98; /* Cambia el color del precio */
+}
+
+/* Estilos para el enlace "See more" */
+.see-more {
+  color: #333; /* Cambia el color del enlace */
+  text-decoration: none; /* Elimina la subrayado predeterminado */
+  font-weight: bold; /* Hace que el enlace sea audaz */
+}
+
+.see-more:hover {
+  color: #ff6f98; /* Cambia el color cuando se pasa el ratón sobre el enlace */
+}

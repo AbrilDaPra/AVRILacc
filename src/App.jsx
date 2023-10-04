@@ -1,6 +1,6 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import { BrowserRouter, Route, Routes } from "react-router-dom/dist";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemListContainer from './components/ItemListContainer';
 import Home from './components/Home';
 import Aboutus from './components/Aboutus';
@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { CartProvider } from './context/CartContext';
+import Checkout from './components/Checkout';
 
 const App = () => {
 
@@ -28,7 +29,7 @@ const App = () => {
             <Route exact path="/aboutus" element={ <Aboutus /> } />
             <Route exact path="/contact" element={ <Contact /> } />
             <Route exact path="/cart" element={ <Cart />} />
-
+            <Route exact path="/checkout" element={ <Checkout />} />
           </Routes>
           
         </BrowserRouter>

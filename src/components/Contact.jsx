@@ -1,23 +1,30 @@
+import { useForm } from "react-hook-form";
 import '../App.css';
 
 const Contact = () => {
+
+    const { register, handleSubmit } = useForm();
+
+    const send = (data) => {
+        console.log(data);
+    }
+
   return (
-    <div className='contact'>
-      <h1>Contact Us</h1>
-      <p>
-        If you have any questions or inquiries, feel free to get in touch with us. Our dedicated team is here to assist you.
-      </p>
-      <p>
-        Email: info@example.com
-      </p>
-      <p>
-        Phone: +1 (123) 456-7890
-      </p>
-      <p>
-        Address: 123 Main Street, City, Country
-      </p>
+
+    <div className="container">
+        <h1 className="main-title">Contact</h1>
+        <form className="form" onSubmit={handleSubmit(send)}>
+
+            <input type="text" placeholder="Enter your name" {...register("name")} />
+            <input type="email" placeholder="Enter your email" {...register("email")} />
+            <input type="phone" placeholder="Enter your cellphone" {...register("cellphone")} />
+
+            <button className="send" type="submit">SEND</button>
+
+        </form>
     </div>
+
   )
 }
 
-export default Contact
+export default Contact;

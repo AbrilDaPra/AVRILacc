@@ -1,12 +1,20 @@
+import { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import '../App.css';
+
 const CartWidget = () => {
+
+    const { quantityInCart } = useContext(CartContext);
+
   return (
-    <div className='cart'>
-      <ShoppingCartIcon sx={{ color: 'white' }} />
-      <p className='cart-text'>5</p>
+    <div>
+        <Link className="menu-link" to="/cart">
+          <ShoppingCartIcon sx={{ color: 'white' }} />
+          <span className="cart-number">{quantityInCart()}</span>
+        </Link>
     </div>
   )
 }
 
-export default CartWidget
+export default CartWidget;

@@ -13,14 +13,12 @@ const NavBar = () => {
         <li><Link className="menu-link" to="/contact">CONTACT</Link></li>
       </ul>
 
-      <Link to={"/cart"}>
-        <CartWidget />
-      </Link>
+      <CartWidget />
 
     </nav>
   )
 }
 
-export default NavBar
+export default NavBar;
 
 

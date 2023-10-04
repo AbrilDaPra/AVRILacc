@@ -1,48 +1,59 @@
-import { createContext, useContext, useState} from 'react';
+import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 
-const CartContext = createContext();
+export const CartContext = createContext();
 
-export const useCart = () => {
-    return useContext(CartContext);
-};
+const initialCart = JSON.parse(localStorage.getItem("cart")) || [];
 
-export const CartProvider = ({ children }) => {
-    const [cart, setCart] = useState([]);
+export const CartProvider = ({children}) => {
 
-    const handleAddToCart = (product, quantity) => {
-        // const updatedCart = [...cart, {...product, quantity }];
-        // setCart(updatedCart);
-        const existingProduct = cart.find((item) => item.id === product.id);
-        
-        if(existingProduct){
-            const updatedCart = cart.map((item) =>
-                item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
-            );
-            setCart(updatedCart);
-        } else{
-            const newItem = { ...product, quantity };
-            setCart([...cart, newItem]);
+    const [cart, setCart] = useState(initialCart);
+
+    const addToCart = (item, quantity) => {
+        const addedItem = { ...item, quantity };
+
+        const newCart = [...cart];
+        const itsInTheCart = newCart.find((product) => product.id === addedItem.id);
+
+        if (itsInTheCart) {
+            itsInTheCart.quantity += quantity;
+        } else {
+            newCart.push(addedItem);
         }
-    };
-
-    const handleRemoveFromCart = (productId) => {
-        const updatedCart = cart.filter((item) => item.id !== productId)
-        setCart(updatedCart);
+        setCart(newCart);
     }
 
+    const quantityInCart = () => {
+        return cart.reduce((acc, prod) => acc + prod.quantity, 0);
+    }
+
+    const totalPrice = () => {
+        return cart.reduce((acc, prod) => acc + prod.price * prod.quantity, 0);
+    }
+
+    const clearCart = () => {
+        setCart([]);
+    }
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart])
+    
+
     return (
-        <CartContext.Provider
+        <CartContext.Provider 
             value={{
-                cart,
-                handleAddToCart,
-                handleRemoveFromCart,
-            }}
-        >
+            cart,
+            addToCart,
+            quantityInCart,
+            totalPrice,
+            clearCart
+            }
+        }>
             {children}
         </CartContext.Provider>
-    );
-};
+    )
+}
 
 CartProvider.propTypes = {
     children: PropTypes.node.isRequired,

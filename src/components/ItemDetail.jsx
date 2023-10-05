@@ -21,13 +21,13 @@ const ItemDetail = ({ item }) => {
       quantity < item.Stock && setQuantity(quantity + 1)
     };
     
-    // const handleAdd = () => {
-    //   if (quantity > 0) {
-    //     addToCart(item, quantity);
-    //   } else {
-    //     console.log("Please select at least one product to add to the cart");
-    //   }
-    // };
+    const handleAdd = () => {
+      if (quantity > 0) {
+        addToCart(item, quantity);
+      } else {
+        console.log("Please select at least one product to add to the cart");
+      }
+    };
 
   return (
     <Card>

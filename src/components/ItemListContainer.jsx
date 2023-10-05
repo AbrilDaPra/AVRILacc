@@ -15,7 +15,7 @@ const ItemListContainer = () => {
 
     useEffect(() => {
       const productsRef = collection(db, "products");
-      const q = categorie ? query(productsRef, where("categorie", "==", categorie)) : productsRef;
+      const q = categorie ? query(productsRef, where("Categorie", "==", categorie)) : productsRef;
 
       getDocs(q)
         .then((resp) => {

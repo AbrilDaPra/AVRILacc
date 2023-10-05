@@ -24,7 +24,7 @@ const ItemDetail = ({ item }) => {
       // if (quantity < product.stock) {
       //   setQuantity(quantity + 1);
       // }
-      quantity < item.stock && setQuantity(quantity + 1)
+      quantity < item.Stock && setQuantity(quantity + 1)
     };
     
     // const handleAdd = () => {
@@ -39,22 +39,22 @@ const ItemDetail = ({ item }) => {
     <Card>
       <CardMedia
         sx={{ height: "300px" }}
-        image={item.image}
-        title={item.name}
-        alt={item.description}
+        image={item.Image?.path}
+        title={item.Title}
+        alt={item.Description}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {item.name}
+          {item.Title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Description: {item.description}
+          Description: {item.Description}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Category: {item.categorie}
+          Category: {item.Categorie}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Price: ${item.price}
+          Price: ${item.Price}
         </Typography>
         <CardActions>
           <Counter

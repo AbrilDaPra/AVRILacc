@@ -14,16 +14,10 @@ const ItemDetail = ({ item }) => {
     const [quantity, setQuantity] = useState(1);
 
     const handleDecrement = () => {
-      // if (quantity > 1) {
-      //   setQuantity(quantity - 1);
-      // }
       quantity > 1 && setQuantity(quantity - 1)
     };
     
     const handleIncrement = () => {
-      // if (quantity < product.stock) {
-      //   setQuantity(quantity + 1);
-      // }
       quantity < item.Stock && setQuantity(quantity + 1)
     };
     

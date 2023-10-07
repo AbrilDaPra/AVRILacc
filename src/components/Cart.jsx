@@ -18,9 +18,9 @@ const Cart = () => {
           cart.map((prod) => (
               <div key={prod.id}>
                   <br />
-                  <h3>{prod.title}</h3>
-                  <p>Unit price: ${prod.price}</p>
-                  <p>Total price: ${prod.price * prod.quantity}</p>
+                  <h3>{prod.Title}</h3>
+                  <p>Unit price: ${prod.Price}</p>
+                  <p>Total price: ${prod.Price * prod.quantity}</p>
                   <p>Quantity: {prod.quantity}</p>
                   <br />
               </div>

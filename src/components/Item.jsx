@@ -46,10 +46,6 @@ const Item = ( {product} ) => {
                 <Typography variant="body2" color="text.secondary" className="product-price">
                   Price: ${Price}
                 </Typography>
-                {/* <Button onClick={toggleDescription} className="show-details-button">
-                  {showDescription ? "Hide details" : "Show details"}
-                </Button>
-                {showDescription && <p>{description}</p>} */}
               </CardContent>
               <CardActions>
                 <Counter className="product-counter" 

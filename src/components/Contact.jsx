@@ -11,7 +11,7 @@ const Contact = () => {
 
   return (
 
-    <div className="container">
+    <div className="contact-container">
         <h1 className="main-title">Contact</h1>
         <form className="form" onSubmit={handleSubmit(send)}>
 

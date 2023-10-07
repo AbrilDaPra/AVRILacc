@@ -18,15 +18,13 @@ a{
   align-items: center;
   padding: 10px 20px;
 }
-
 .logo{
   color: #FFE1E1;
 }
-
 .logo h1{
-  margin: 0;
+  margin-left: 20px;
+  font-size: 40px;
 }
-
 .menu{
   list-style-type: none;
   display: flex;
@@ -35,7 +33,6 @@ a{
 .menu li a{
   color: #FFE1E1;
 }
-
 .menu-link:hover{
   color: gray;
 }
@@ -46,11 +43,10 @@ a{
   align-items: center;
   justify-content: space-between;
   width: 150px;
-  border: 1px solid black;
+  border: 1px solid pink;
   border-radius: 5px;
   padding: 5px;
 }
-
 .counterButton{
   background-color: pink;
   color: white;
@@ -58,9 +54,8 @@ a{
   border-radius: 3px;
   cursor: pointer;
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 18px;
 }
-
 .counterValue{
   font-size: 18px;
   font-weight: bold;
@@ -73,8 +68,9 @@ a{
   border-radius: 3px;
   color: white;
   margin-left: 10px;
+  padding: 10px;
+  margin: 10px 0px 0px 0px;
 }
-
 .cardsContainer{
   display: flex;
   flex-wrap: wrap;
@@ -110,39 +106,34 @@ a{
 }
 
 /* CART */
+.menu-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
 .cart{
   display: flex;
   gap: 20px;
   margin: 10px;
 }
-
 .cart-number {
-  color: white;
+  color: pink;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 10px;
+}
+.cart-number:hover{
+  background-color: #FF6F98;
 }
 
 
 /* PRODUCTS */
-.product-list{
-  margin: 30px;
-}
 .product-card{
   margin-bottom: 40px;
   width: 300px;
   height: 580px;
-}
-.product-title{
-  margin-bottom: 10px;
-}
-.product-card-content{
-  margin-bottom: 10px;
-}
-.product-price{
-  margin-bottom: 10px;
-}
-.product-image{
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
 }
 .products-container{
   display: flex;
@@ -152,11 +143,6 @@ a{
 }
 .products-container h1{
   margin: 30px;
-}
-.product-grid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
 }
 
 /* ABOUT US */
@@ -180,22 +166,44 @@ a{
 }
 
 /* CONTACT */
-.contact {
-  text-align: center;
-  padding: 20px;
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh; 
+  background-color: pink;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
-
-.contact h1 {
-  font-size: 36px;
+.main-title {
+  font-size: 30px;
   margin-bottom: 20px;
-  color: #333;
 }
-
-.contact p {
-  font-size: 18px;
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+input {
+  width: 100%;
+  padding: 10px;
   margin-bottom: 15px;
-  line-height: 1.5;
-  color: #666;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+}
+button.send {
+  background-color: #FF6F98;
+  color: pink;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+button.send:hover {
+  background-color: grey;
 }
 
 /* SHOW DETAILS */
@@ -270,23 +278,21 @@ background-color: #FFE1E1;
 }
 
 .product-title {
-  font-size: 18px; /* Cambia el tamaño del título del producto */
-  margin-bottom: 10px; /* Agrega espacio inferior */
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-/* Estilos para el precio del producto */
 .product-price {
-  font-weight: bold; /* Hace que el precio sea más audaz */
-  color: #ff6f98; /* Cambia el color del precio */
+  font-weight: bold; 
+  color: #ff6f98; 
 }
 
-/* Estilos para el enlace "See more" */
 .see-more {
-  color: #333; /* Cambia el color del enlace */
-  text-decoration: none; /* Elimina la subrayado predeterminado */
-  font-weight: bold; /* Hace que el enlace sea audaz */
+  color: #333; 
+  text-decoration: none; 
+  font-weight: bold; 
 }
 
 .see-more:hover {
-  color: #ff6f98; /* Cambia el color cuando se pasa el ratón sobre el enlace */
+  color: #ff6f98;
 }

@@ -10,7 +10,7 @@ const CartWidget = () => {
   return (
     <div>
         <Link className="menu-link" to="/cart">
-          <ShoppingCartIcon sx={{ color: 'white' }} />
+          <ShoppingCartIcon sx={{ color: 'pink' }} />
           <span className="cart-number">{quantityInCart()}</span>
         </Link>
     </div>

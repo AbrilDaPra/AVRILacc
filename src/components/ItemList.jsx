@@ -1,5 +1,4 @@
 import Item from "./Item";
-// import { toCapital } from "../helpers/toCapital";
 import PropTypes from 'prop-types';
 
 const ItemList = ( {products} ) => {
@@ -16,7 +15,6 @@ const ItemList = ( {products} ) => {
 
 ItemList.propTypes = {
   products: PropTypes.array.isRequired,
-  title: PropTypes.string.isRequired
 };
 
 export default ItemList;

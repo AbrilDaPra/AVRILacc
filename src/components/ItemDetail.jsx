@@ -32,7 +32,7 @@ const ItemDetail = ({ item }) => {
   return (
     <Card>
       <CardMedia
-        sx={{ height: "300px" }}
+        sx={{ height: "400px", width:"400px" }}
         image={item.Image?.path}
         title={item.Title}
         alt={item.Description}

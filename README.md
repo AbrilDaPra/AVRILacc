@@ -8,6 +8,7 @@ Welcome to my AVRIL acc website project! This website showcases a wide range of 
 - [Run the Development Server](#run-the-development-server)
 - [Features](#features)
 - [Gif](#gif)
+- [Firebase Image](#firebase-image)
 
 ## About the Project
 
@@ -32,3 +33,6 @@ Interactive UI: Experience an engaging user interface with dynamic elements.
 
 ## GIF
 ![]https://github.com/AbrilDaPra/AVRILacc/blob/main/ezgif.com-video-to-gif.gif
+
+## Firebase image
+![]
